@@ -38,12 +38,12 @@ db.loadDatabase({}, () => {
     const ponty = halaim.find({halfaj:"ponty"});
     console.log(ponty);
 
-    halaim.remove(ponty);
+    halaim.remove(ponty); //egyet töröl csak 
 
     db.saveDatabase((err) => {
 
         if (!err) {
-            return console.log("Mentés sikeres");
+            return console.log(`${halaim.lenght} elemeim mentés sikeres`);
         }
 
         //hiba ág
